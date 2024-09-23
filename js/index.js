@@ -3,8 +3,13 @@ const currentDonationEl = document.getElementById("current-amount");
 const donateAmountEl = document.getElementById("donate-amount");
 const donateBtn = document.getElementById("donate-btn");
 const historyEl = document.getElementById("history-section");
-
-//time and date 
+const currentDonationEl1 = document.getElementById("current-amount1");
+const donateAmountEl1 = document.getElementById("donate-amount1");
+const donateBtn1 = document.getElementById("donate-btn1");
+const currentDonationEl2 = document.getElementById("current-amount1");
+const donateAmountEl2 = document.getElementById("donate-amount1");
+const donateBtn2 = document.getElementById("donate-btn1");
+//time and date
 function getFormattedDateTime() {
   const now = new Date();
   return now.toLocaleString("en-GB", {
@@ -19,6 +24,7 @@ function getFormattedDateTime() {
   });
 }
 
+// 1st card
 donateBtn.addEventListener("click", function () {
   const balance = parseFloat(balanceEl.innerText);
   const currentAmount = parseFloat(currentDonationEl.innerText);
@@ -45,6 +51,34 @@ donateBtn.addEventListener("click", function () {
   historyContainer.insertBefore(historyList, historyContainer.firstChild);
 
   donateAmountEl.value = "";
+});
+//2nd card
+donateBtn1.addEventListener("click", function () {
+  const balance = parseFloat(balanceEl.innerText);
+  const currentAmount1 = parseFloat(currentDonationEl1.innerText);
+  const donateAmount1 = parseFloat(donateAmountEl1.value);
+
+  if (donateAmount1 < 0 || isNaN(donateAmount1)) {
+    return alert("Please enter a valid donation amount");
+  }
+
+  const newBalance1 = balance - donateAmount1;
+  balanceEl.innerText = newBalance1;
+
+  const newDonation1 = currentAmount1 + donateAmount1;
+  currentDonationEl1.innerText = newDonation1;
+
+  const dateTime = getFormattedDateTime();
+  const historyList = document.createElement("li");
+  historyList.className = "card card-side shadow p-4 items-center";
+  historyList.innerText = `${newDonation1} Taka is Donated for Flood Relief in Feni,Bangladesh
+      Date :${dateTime} GMT +0600 (Bangladesh Standard Time)
+  `;
+
+  const historyContainer = document.getElementById("history-section");
+  historyContainer.insertBefore(historyList, historyContainer.firstChild);
+
+  donateAmountEl1.value = "";
 });
 
 // donationTab and historyTab functionality
