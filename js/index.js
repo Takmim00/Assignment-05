@@ -6,9 +6,9 @@ const historyEl = document.getElementById("history-section");
 const currentDonationEl1 = document.getElementById("current-amount1");
 const donateAmountEl1 = document.getElementById("donate-amount1");
 const donateBtn1 = document.getElementById("donate-btn1");
-const currentDonationEl2 = document.getElementById("current-amount1");
-const donateAmountEl2 = document.getElementById("donate-amount1");
-const donateBtn2 = document.getElementById("donate-btn1");
+const currentDonationEl2 = document.getElementById("current-amount2");
+const donateAmountEl2 = document.getElementById("donate-amount2");
+const donateBtn2 = document.getElementById("donate-btn2");
 //time and date
 function getFormattedDateTime() {
   const now = new Date();
@@ -79,6 +79,34 @@ donateBtn1.addEventListener("click", function () {
   historyContainer.insertBefore(historyList, historyContainer.firstChild);
 
   donateAmountEl1.value = "";
+});
+//3nd card
+donateBtn2.addEventListener("click", function () {
+  const balance = parseFloat(balanceEl.innerText);
+  const currentAmount2 = parseFloat(currentDonationEl2.innerText);
+  const donateAmount2 = parseFloat(donateAmountEl2.value);
+
+  if (donateAmount2 < 0 || isNaN(donateAmount2)) {
+    return alert("Please enter a valid donation amount");
+  }
+
+  const newBalance2 = balance - donateAmount2;
+  balanceEl.innerText = newBalance2;
+
+  const newDonation2 = currentAmount2 + donateAmount2;
+  currentDonationEl2.innerText = newDonation2;
+
+  const dateTime = getFormattedDateTime();
+  const historyList = document.createElement("li");
+  historyList.className = "card card-side shadow p-4 items-center";
+  historyList.innerText = `${newDonation2} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+      Date :${dateTime} GMT +0600 (Bangladesh Standard Time)
+  `;
+
+  const historyContainer = document.getElementById("history-section");
+  historyContainer.insertBefore(historyList, historyContainer.firstChild);
+
+  donateAmountEl2.value = "";
 });
 
 // donationTab and historyTab functionality
