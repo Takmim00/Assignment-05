@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- tailwind css & DaisyUI Links -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font awesome CDN link -->
+    <script
+      src="https://kit.fontawesome.com/7ac0e25b92.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              color: "#F9F7F3",
+            },
+            fontFamily: {
+              Lexend: "Lexend",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Banner section  -->
+    <header class="sticky top-0 z-50 bg-opacity-80 bg-white shadow">
+      <!-- navbar section start -->
+      <nav class="bg-color py-5">
+        <div class="navbar w-11/12 mx-auto">
+          <div class="navbar-start">
+            <a href="./index.html"
+              ><button class="btn bg-[#B4F461] font-semibold text-xl">
+                Home
+              </button></a
+            >
+          </div>
+          <div class="navbar-center">
+            <img width="40px" src="./assets/logo.png" />
+            <span class="font-semibold text-xl ml-4">DONATE BANGLADESH</span>
+          </div>
+          <div class="navbar-end">
+            <img src="./assets/coin.png" alt="" />
+            <p class="ml-4 text-xl font-medium text-[#111111B3]">
+              <span id="balance">6000</span> BDT
+            </p>
+          </div>
+        </div>
+      </nav>
+    </header>
+      <!-- navbar section ends -->
+      <!-- button section start  -->
+      <section class="flex justify-center py-6 space-x-4">
+        <button
+          id="donation-tab"
+          class="border rounded-lg border-[#1111114D] p-4 bg-[#B4F461] font-semibold text-xl focus:outline-none transition-colors duration-200"
+        >
+          Donation
+        </button>
+        <button
+          id="history-tab"
+          class="border rounded-lg border-[#1111114D] p-4 text-gray-500 font-semibold text-xl focus:outline-none transition-colors duration-200"
+        >
+          History
+        </button>
+      </section>
+      <!-- button section start  -->
+      <hr />
+    </header>
+    <section class="w-11/12 mx-auto">
+      <div class="collapse collapse-arrow">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">
+          What is the Document Object Model (DOM)?
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you select an element from the DOM?
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          What is event delegation in the context of the DOM, and why is it
+          useful?
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">
+          How do you manipulate an element's attributes and styles using the
+          DOM?
+        </div>
+        <div class="collapse-content">
+          <p>hello</p>
+        </div>
+      </div>
+    </section>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
