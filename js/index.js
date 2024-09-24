@@ -9,7 +9,6 @@ const donateBtn1 = document.getElementById("donate-btn1");
 const currentDonationEl2 = document.getElementById("current-amount2");
 const donateAmountEl2 = document.getElementById("donate-amount2");
 const donateBtn2 = document.getElementById("donate-btn2");
-const footerEl = document.getElementById("footer");
 
 // Date and timezone
 function getFormateTimeDate() {
