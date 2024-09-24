@@ -134,11 +134,14 @@ historyTab.addEventListener("click", function () {
 });
 donationTab.addEventListener("click", function () {
   donationTab.classList.add("text-black", "bg-[#B4F461]", "border-[#1111114D]");
+  historyTab.classList.add("text-gray-500");
   historyTab.classList.remove(
     "text-black",
     "bg-[#B4F461]",
     "border-[#1111114D]"
   );
+  donationTab.classList.remove("text-gray-500");
   document.getElementById("donation-section").classList.remove("hidden");
   document.getElementById("history-section").classList.add("hidden");
+
 });
