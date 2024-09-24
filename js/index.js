@@ -46,7 +46,7 @@ donateBtn.addEventListener("click", function () {
   const dateTime = getFormateTimeDate();
   const historyList = document.createElement("li");
   historyList.className = "card card-side shadow p-4 items-center";
-  historyList.innerText = `${newDonation} Taka is Donated for famine-2024 at Feni, Bangladesh
+  historyList.innerText = `${donateAmount} Taka is Donated for famine-2024 at Noakhali, Bangladesh
       Date : ${dateTime} GMT +0600 (Bangladesh Standard Time)
   `;
 
@@ -76,7 +76,7 @@ donateBtn1.addEventListener("click", function () {
   const dateTime = getFormateTimeDate();
   const historyList = document.createElement("li");
   historyList.className = "card card-side shadow p-4 items-center";
-  historyList.innerText = `${newDonation1} Taka is Donated for Flood Relief in Feni,Bangladesh
+  historyList.innerText = `${donateAmount1} Taka is Donated for Flood Relief in Feni,Bangladesh
       Date : ${dateTime} GMT +0600 (Bangladesh Standard Time)
   `;
 
@@ -106,7 +106,7 @@ donateBtn2.addEventListener("click", function () {
   const dateTime = getFormateTimeDate();
   const historyList = document.createElement("div");
   historyList.className = "card card-side shadow p-4 items-center";
-  historyList.innerText = `${newDonation2} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+  historyList.innerText = `${donateAmount2} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
       Date : ${dateTime} GMT +0600 (Bangladesh Standard Time)
   `;
 
