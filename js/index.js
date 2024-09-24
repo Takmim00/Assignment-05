@@ -131,7 +131,6 @@ historyTab.addEventListener("click", function () {
   donationTab.classList.add("text-gray-500");
   document.getElementById("donation-section").classList.add("hidden");
   document.getElementById("history-section").classList.remove("hidden");
-  footerEl.classList.add("hidden");
 });
 donationTab.addEventListener("click", function () {
   donationTab.classList.add("text-black", "bg-[#B4F461]", "border-[#1111114D]");
@@ -142,5 +141,4 @@ donationTab.addEventListener("click", function () {
   );
   document.getElementById("donation-section").classList.remove("hidden");
   document.getElementById("history-section").classList.add("hidden");
-  footerEl.classList.remove("hidden");
 });

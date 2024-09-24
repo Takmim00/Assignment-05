@@ -39,7 +39,7 @@
   </head>
   <body class="font-Lexend">
     <!-- Banner section  -->
-    <header class="sticky top-0 z-50 bg-opacity-80 bg-white shadow">
+    <header class="sticky top-0 z-50 backdrop-blur-lg">
       <!-- navbar section start -->
       <nav class="bg-color py-5">
         <div class="navbar w-11/12 mx-auto">
@@ -57,7 +57,7 @@
           <div class="navbar-end">
             <img src="./assets/coin.png" alt="" />
             <p class="ml-4 text-xl font-medium text-[#111111B3]">
-              <span id="balance">6000</span> BDT
+              <span id="balance">10000</span> BDT
             </p>
           </div>
         </div>
@@ -72,45 +72,53 @@
     <hr />
     </header>
     <section class="w-11/12 mx-auto">
-      <div class="collapse collapse-arrow">
+      <div class="collapse collapse-arrow shadow">
         <input type="radio" name="my-accordion-2" checked="checked" />
         <div class="collapse-title text-xl font-medium">
           What is the Document Object Model (DOM)?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>The Document Object Model (DOM) is a cross-platform and language-independent interface that treats an HTML or XML document as a tree structure where each node is an object representing a part of the document. DOM represents a document with a logical tree.</p>
         </div>
       </div>
-      <div class="collapse collapse-arrow">
+      <div class="collapse collapse-arrow shadow">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           How do you select an element from the DOM?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>A variety of methods can be used to select an element from the DOM using JavaScript, such as using IDs, classes, tags, or CSS selectors. Below are some common ways to select ingredients:
+            <ol class="list-decimal px-5">
+              <li>An element with the specified id is selected with getElementById().</li>
+              <li>GetElementsByClassName() can be used to select one or more elements with a specified class. It returns a live HTMLCollection, which behaves like a list.</li>
+              <li>getElementsByTagName() can be used to select one or more elements using the specified tag name. It also returns HTMLCollection.</li>
+              <li>The first element found through the CSS selector is selected with querySelector().</li>
+              <li>One or more elements are selected via CSS selectors with querySelectorAll(). It returns a NodeList.</li>
+            </ol>
+          </p>
         </div>
       </div>
-      <div class="collapse collapse-arrow">
+      <div class="collapse collapse-arrow shadow">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           What is event delegation in the context of the DOM, and why is it
           useful?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>Event delegation is an effective JavaScript technique where, instead of adding event handlers to multiple elements individually, an event handler is added to a parent element. The event reaches the correct element through the bubbling process.Event delegation is a powerful event handling technique in JavaScript, which is very effective in terms of performance and scalability.</p>
         </div>
       </div>
-      <div class="collapse collapse-arrow">
+      <div class="collapse collapse-arrow shadow">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           How do you manipulate an element's attributes and styles using the
           DOM?
         </div>
         <div class="collapse-content">
-          <p>hello</p>
+          <p>Manipulating element properties and styles is very easy using the DOM. The look and functionality of web page elements can be changed through various methods. It makes the web application more interactive and user friendly. DOM manipulation enables the creation and modification of dynamic content, an important part of modern web development.</p>
         </div>
       </div>
     </section>
-    <!-- <script src="./js/index.js"></script> -->
+    <footer class="p-14 bg-color"></footer>    
   </body>
 </html>
