@@ -85,7 +85,7 @@ donateBtn1.addEventListener("click", function () {
 
   donateAmountEl1.value = "";
 });
-//3nd card
+//3rd card
 donateBtn2.addEventListener("click", function () {
   const balance = parseFloat(balanceEl.innerText);
   const currentAmount2 = parseFloat(currentDonationEl2.innerText);
