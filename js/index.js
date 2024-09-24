@@ -1,28 +1,17 @@
 const balanceEl = document.getElementById("balance");
+const historyEl = document.getElementById("history-section");
 const currentDonationEl = document.getElementById("current-amount");
 const donateAmountEl = document.getElementById("donate-amount");
 const donateBtn = document.getElementById("donate-btn");
-const historyEl = document.getElementById("history-section");
 const currentDonationEl1 = document.getElementById("current-amount1");
 const donateAmountEl1 = document.getElementById("donate-amount1");
 const donateBtn1 = document.getElementById("donate-btn1");
 const currentDonationEl2 = document.getElementById("current-amount2");
 const donateAmountEl2 = document.getElementById("donate-amount2");
 const donateBtn2 = document.getElementById("donate-btn2");
-//time and date
-function getFormattedDateTime() {
-  const now = new Date();
-  return now.toLocaleString("en-GB", {
-    timeZone: "Asia/Dhaka",
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-  });
-}
+const footerEl = document.getElementById("footer");
+
+
 
 // 1st card
 donateBtn.addEventListener("click", function () {
@@ -32,6 +21,8 @@ donateBtn.addEventListener("click", function () {
 
   if (donateAmount < 0 || isNaN(donateAmount)) {
     return alert("Please enter a valid donation amount");
+  } else {
+    my_modal.showModal();
   }
 
   const newBalance = balance - donateAmount;
@@ -58,8 +49,10 @@ donateBtn1.addEventListener("click", function () {
   const currentAmount1 = parseFloat(currentDonationEl1.innerText);
   const donateAmount1 = parseFloat(donateAmountEl1.value);
 
-  if (donateAmount1 < 0 || isNaN(donateAmount1)) {
+  if (Number(donateAmount1) < 0 || isNaN(donateAmount1)) {
     return alert("Please enter a valid donation amount");
+  } else {
+    my_modal.showModal();
   }
 
   const newBalance1 = balance - donateAmount1;
@@ -88,6 +81,8 @@ donateBtn2.addEventListener("click", function () {
 
   if (donateAmount2 < 0 || isNaN(donateAmount2)) {
     return alert("Please enter a valid donation amount");
+  } else {
+    my_modal.showModal();
   }
 
   const newBalance2 = balance - donateAmount2;
@@ -97,7 +92,7 @@ donateBtn2.addEventListener("click", function () {
   currentDonationEl2.innerText = newDonation2;
 
   const dateTime = getFormattedDateTime();
-  const historyList = document.createElement("li");
+  const historyList = document.createElement("div");
   historyList.className = "card card-side shadow p-4 items-center";
   historyList.innerText = `${newDonation2} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
       Date :${dateTime} GMT +0600 (Bangladesh Standard Time)
@@ -124,6 +119,7 @@ historyTab.addEventListener("click", function () {
   donationTab.classList.add("text-gray-500");
   document.getElementById("donation-section").classList.add("hidden");
   document.getElementById("history-section").classList.remove("hidden");
+  footerEl.classList.add("hidden");
 });
 donationTab.addEventListener("click", function () {
   donationTab.classList.add("text-black", "bg-[#B4F461]", "border-[#1111114D]");
@@ -134,4 +130,5 @@ donationTab.addEventListener("click", function () {
   );
   document.getElementById("donation-section").classList.remove("hidden");
   document.getElementById("history-section").classList.add("hidden");
+  footerEl.classList.remove("hidden");
 });

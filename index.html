@@ -45,9 +45,13 @@
       <nav class="bg-color py-5">
         <div class="navbar w-11/12 mx-auto">
           <div class="navbar-start">
-            <a href="./home.html"><button class="btn bg-[#B4F461] font-semibold text-xl">Blog</button></a>
+            <a href="./home.html"
+              ><button class="btn bg-[#B4F461] font-semibold text-xl">
+                Blog
+              </button></a
+            >
           </div>
-          <div class="navbar-center">
+          <div class="navbar-center hidden lg:flex">
             <img width="40px" src="./assets/logo.png" />
             <span class="font-semibold text-xl ml-4">DONATE BANGLADESH</span>
           </div>
@@ -80,10 +84,14 @@
     </header>
     <!-- card section start -->
     <section id="donation-section" class="w-11/12 mx-auto mt-6 space-y-6 pb-16">
-      <div class="card card-side bg-base-100 shadow p-4 gap-6">
+      <div
+        class="card card-side flex lg:flex-row flex-col bg-base-100 shadow p-4 gap-6"
+      >
         <img src="./assets/noakhali.png" alt="" />
         <div class="card-body space-y-4 px-6">
-          <div class="card-actions p-4 rounded-lg w-[40%] bg-[#1111110D]">
+          <div
+            class="card-actions p-4 rounded-lg lg:w-[40%] w-[70%] bg-[#1111110D]"
+          >
             <img src="./assets/coin.png" alt="" />
             <p class="ml-2 text-xl font-medium text-[#111111B3]">
               <span id="current-amount">1000</span> BDT
@@ -110,7 +118,6 @@
               value=""
             />
             <button
-              onclick="my_modal_1.showModal()"
               id="donate-btn"
               class="btn w-full bg-[#B4F461] hover:bg-[#b4f461e0] font-semibold text-xl"
             >
@@ -119,10 +126,14 @@
           </div>
         </div>
       </div>
-      <div class="card card-side bg-base-100 shadow p-4 gap-6">
+      <div
+        class="card card-side flex lg:flex-row flex-col bg-base-100 shadow p-4 gap-6"
+      >
         <img src="./assets/feni.png" alt="" />
         <div class="card-body space-y-4 px-6">
-          <div class="card-actions p-4 rounded-lg w-[40%] bg-[#1111110D]">
+          <div
+            class="card-actions p-4 rounded-lg lg:w-[40%] w-[70%] bg-[#1111110D]"
+          >
             <img src="./assets/coin.png" alt="" />
             <p class="ml-2 text-xl font-medium text-[#111111B3]">
               <span id="current-amount1">500</span> BDT
@@ -151,7 +162,6 @@
               value=""
             />
             <button
-              onclick="my_modal_1.showModal()"
               id="donate-btn1"
               class="btn w-full bg-[#B4F461] hover:bg-[#b4f461e0] font-semibold text-xl"
             >
@@ -160,10 +170,14 @@
           </div>
         </div>
       </div>
-      <div class="card card-side bg-base-100 shadow p-4 gap-6">
+      <div
+        class="card card-side flex lg:flex-row flex-col bg-base-100 shadow p-4 gap-6"
+      >
         <img src="./assets/quota-protest.png" alt="" />
         <div class="card-body space-y-4 px-6 w-5/6">
-          <div class="card-actions p-4 rounded-lg w-[40%] bg-[#1111110D]">
+          <div
+            class="card-actions p-4 rounded-lg lg:w-[40%] w-[70%] bg-[#1111110D]"
+          >
             <img src="./assets/coin.png" alt="" />
             <p class="ml-2 text-xl font-medium text-[#111111B3]">
               <span id="current-amount2">2000</span> BDT
@@ -193,7 +207,6 @@
               value=""
             />
             <button
-              onclick="my_modal_1.showModal()"
               id="donate-btn2"
               class="btn w-full bg-[#B4F461] hover:bg-[#b4f461e0] font-semibold text-xl"
             >
@@ -202,7 +215,7 @@
           </div>
         </div>
       </div>
-      <dialog id="my_modal_1" class="modal">
+      <dialog id="my_modal" class="modal">
         <form
           method="dialog"
           class="modal-box px-5 py-10 flex flex-col justify-center items-center"
@@ -226,6 +239,7 @@
     <section id="history-section" class="w-11/12 mx-auto my-6 hidden">
       <div id="history-list" class="gap-6"></div>
     </section>
+    <footer id="footer" class="p-8 bg-color"></footer>
     <script src="./js/index.js"></script>
   </body>
 </html>
