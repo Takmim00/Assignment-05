@@ -11,7 +11,19 @@ const donateAmountEl2 = document.getElementById("donate-amount2");
 const donateBtn2 = document.getElementById("donate-btn2");
 const footerEl = document.getElementById("footer");
 
-
+// Date and timezone
+function getFormateTimeDate() {
+  const now = new Date();
+  return now.toLocaleString("en-GB", {
+    timeZone: "Asia/Dhaka",
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  });
+}
 
 // 1st card
 donateBtn.addEventListener("click", function () {
@@ -31,11 +43,11 @@ donateBtn.addEventListener("click", function () {
   const newDonation = currentAmount + donateAmount;
   currentDonationEl.innerText = newDonation;
 
-  const dateTime = getFormattedDateTime();
+  const dateTime = getFormateTimeDate();
   const historyList = document.createElement("li");
   historyList.className = "card card-side shadow p-4 items-center";
   historyList.innerText = `${newDonation} Taka is Donated for famine-2024 at Feni, Bangladesh
-      Date :${dateTime} GMT +0600 (Bangladesh Standard Time)
+      Date : ${dateTime} GMT +0600 (Bangladesh Standard Time)
   `;
 
   const historyContainer = document.getElementById("history-section");
@@ -61,11 +73,11 @@ donateBtn1.addEventListener("click", function () {
   const newDonation1 = currentAmount1 + donateAmount1;
   currentDonationEl1.innerText = newDonation1;
 
-  const dateTime = getFormattedDateTime();
+  const dateTime = getFormateTimeDate();
   const historyList = document.createElement("li");
   historyList.className = "card card-side shadow p-4 items-center";
   historyList.innerText = `${newDonation1} Taka is Donated for Flood Relief in Feni,Bangladesh
-      Date :${dateTime} GMT +0600 (Bangladesh Standard Time)
+      Date : ${dateTime} GMT +0600 (Bangladesh Standard Time)
   `;
 
   const historyContainer = document.getElementById("history-section");
@@ -91,11 +103,11 @@ donateBtn2.addEventListener("click", function () {
   const newDonation2 = currentAmount2 + donateAmount2;
   currentDonationEl2.innerText = newDonation2;
 
-  const dateTime = getFormattedDateTime();
+  const dateTime = getFormateTimeDate();
   const historyList = document.createElement("div");
   historyList.className = "card card-side shadow p-4 items-center";
   historyList.innerText = `${newDonation2} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
-      Date :${dateTime} GMT +0600 (Bangladesh Standard Time)
+      Date : ${dateTime} GMT +0600 (Bangladesh Standard Time)
   `;
 
   const historyContainer = document.getElementById("history-section");
