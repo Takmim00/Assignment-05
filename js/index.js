@@ -31,7 +31,7 @@ donateBtn.addEventListener("click", function () {
   const currentAmount = parseFloat(currentDonationEl.innerText);
   const donateAmount = parseFloat(donateAmountEl.value);
 
-  if (donateAmount < 0 || isNaN(donateAmount)) {
+  if (isNaN(donateAmount) || donateAmount <= 0 || donateAmount >= balance) {
     return alert("Please enter a valid donation amount");
   } else {
     my_modal.showModal();
@@ -61,7 +61,7 @@ donateBtn1.addEventListener("click", function () {
   const currentAmount1 = parseFloat(currentDonationEl1.innerText);
   const donateAmount1 = parseFloat(donateAmountEl1.value);
 
-  if (Number(donateAmount1) < 0 || isNaN(donateAmount1)) {
+  if (isNaN(donateAmount1) || donateAmount1 <= 0 || donateAmount1 >= balance) {
     return alert("Please enter a valid donation amount");
   } else {
     my_modal.showModal();
@@ -91,7 +91,7 @@ donateBtn2.addEventListener("click", function () {
   const currentAmount2 = parseFloat(currentDonationEl2.innerText);
   const donateAmount2 = parseFloat(donateAmountEl2.value);
 
-  if (donateAmount2 < 0 || isNaN(donateAmount2)) {
+  if (isNaN(donateAmount2) || donateAmount2 <= 0 || donateAmount2 >= balance) {
     return alert("Please enter a valid donation amount");
   } else {
     my_modal.showModal();
